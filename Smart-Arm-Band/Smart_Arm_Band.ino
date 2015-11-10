@@ -164,10 +164,10 @@ void setup() {
    Serial.begin(9600); // for debugging
    Serial.println("SETUP");
    
+   
    display.initialize();
    Serial.println(F("- SSD-1306 is ready"));
    draw_text("- SSD-1306 is ready");
-   
    
    
    while(!Serial); // Leonardo/Micro should wait for serial init
@@ -175,7 +175,6 @@ void setup() {
    BTLEserial.begin();
    Serial.println(F("- BLE nRF8001 is ready"));
    draw_text("- BLE nRF8001 is ready");
-   
    
 }
 
