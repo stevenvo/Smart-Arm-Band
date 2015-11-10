@@ -1,13 +1,16 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0E860D91E20A42B700ED69C94C38148DDC7B2F4D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0E860D91E20A42B700ED69C94C38148DDC7B2F4D" : 0,
     "879A41C8F0E51058006438C66CDC082D838D9F0D" : 0,
     "9FD187485949B80EEC28681394C8F702B38913BE" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3B42E031-3C18-4881-915C-2B4BB6300EB4",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0E860D91E20A42B700ED69C94C38148DDC7B2F4D" : "Smart-Arm-Band\/",
     "879A41C8F0E51058006438C66CDC082D838D9F0D" : "..\/..\/..\/..\/Applications\/Arduino.app\/Contents\/Java\/libraries\/spi4teensy3",
     "9FD187485949B80EEC28681394C8F702B38913BE" : "..\/..\/..\/..\/Applications\/Arduino.app\/Contents\/Java\/libraries\/Adafruit_nRF8001"
   },
@@ -15,6 +18,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Smart-Arm-Band.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/stevenvo\/Smart-Arm-Band.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0E860D91E20A42B700ED69C94C38148DDC7B2F4D"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xxxajk\/spi4teensy3",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
