@@ -394,7 +394,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		856870EC1BF27AF90099B144 /* libraries */ = {isa = PBXFileReference; lastKnownFileType = folder; name = libraries; path = ../../libraries; sourceTree = "<group>"; };
+		856870EE1BF27E930099B144 /* libraries */ = {isa = PBXFileReference; lastKnownFileType = folder; name = libraries; path = ../../libraries; sourceTree = "<group>"; };
 		85E65F341BF1D73800805728 /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E65F371BF1D73800805728 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		85E65F391BF1D73800805728 /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -949,7 +949,7 @@
 		85E65F3C1BF1D73800805728 /* Sketchbook */ = {
 			isa = PBXGroup;
 			children = (
-				856870EC1BF27AF90099B144 /* libraries */,
+				856870EE1BF27E930099B144 /* libraries */,
 				85E65F3D1BF1D73800805728 /* Sketchbook.txt */,
 			);
 			name = Sketchbook;
