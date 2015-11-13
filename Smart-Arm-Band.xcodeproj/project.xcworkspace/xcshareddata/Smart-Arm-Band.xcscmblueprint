@@ -4,14 +4,18 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "0E860D91E20A42B700ED69C94C38148DDC7B2F4D" : 0,
+    "6A53AA88579CF9AAA416C4574138CE9F564D3A95" : 0,
     "879A41C8F0E51058006438C66CDC082D838D9F0D" : 0,
+    "0E860D91E20A42B700ED69C94C38148DDC7B2F4D" : 0,
+    "F963443C638409F57FCF66BA448B9B856FB54A87" : 0,
     "9FD187485949B80EEC28681394C8F702B38913BE" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3B42E031-3C18-4881-915C-2B4BB6300EB4",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "0E860D91E20A42B700ED69C94C38148DDC7B2F4D" : "Smart-Arm-Band\/",
+    "6A53AA88579CF9AAA416C4574138CE9F564D3A95" : "libraries\/i2c_t3\/",
     "879A41C8F0E51058006438C66CDC082D838D9F0D" : "..\/..\/..\/..\/Applications\/Arduino.app\/Contents\/Java\/libraries\/spi4teensy3",
+    "0E860D91E20A42B700ED69C94C38148DDC7B2F4D" : "Smart-Arm-Band\/",
+    "F963443C638409F57FCF66BA448B9B856FB54A87" : "libraries\/u8glib\/",
     "9FD187485949B80EEC28681394C8F702B38913BE" : "..\/..\/..\/..\/Applications\/Arduino.app\/Contents\/Java\/libraries\/Adafruit_nRF8001"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Smart-Arm-Band",
@@ -24,6 +28,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0E860D91E20A42B700ED69C94C38148DDC7B2F4D"
     },
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nox771\/i2c_t3",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6A53AA88579CF9AAA416C4574138CE9F564D3A95"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xxxajk\/spi4teensy3",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "879A41C8F0E51058006438C66CDC082D838D9F0D"
@@ -32,6 +41,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/adafruit\/Adafruit_nRF8001",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9FD187485949B80EEC28681394C8F702B38913BE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/olikraus\/u8glib",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F963443C638409F57FCF66BA448B9B856FB54A87"
     }
   ]
 }
