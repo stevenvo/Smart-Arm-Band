@@ -31,7 +31,7 @@ APP_LIBS_LIST = SPI
 # default = 0 = none
 #
 #
-USER_LIBS_LIST = Adafruit_nRF8001 MPU6050 i2c_t3 I2Cdev
+USER_LIBS_LIST = MPU6050 i2c_t3 I2Cdev
 
 # List core, application and user's libraries to be excluded
 # For example, WiFi may crash on Arduino 1.0.2, Esplora on Arduino 1.0.3, Firmata on Teensy 3.0,

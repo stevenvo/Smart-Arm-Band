@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		85265FBB1BF1D73800805728 /* Smart_Arm_Band.ino in Sources */ = {isa = PBXBuildFile; fileRef = 85E65FBB1BF1D73800805728 /* Smart_Arm_Band.ino */; };
 		85E65F381BF1D73800805728 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E65F371BF1D73800805728 /* main.cpp */; };
-		85E65FD51BF1D89600805728 /* Adafruit_GFX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E65FD01BF1D89600805728 /* Adafruit_GFX.cpp */; };
-		85E65FD61BF1D89600805728 /* Adafruit_ssd1306syp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E65FD21BF1D89600805728 /* Adafruit_ssd1306syp.cpp */; };
-		85E65FD71BF1D89600805728 /* glcdfont.c in Sources */ = {isa = PBXBuildFile; fileRef = 85E65FD41BF1D89600805728 /* glcdfont.c */; };
 		AA2A151109234217AA000006 /* Bridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAA151109234217AA000006 /* Bridge.cpp */; };
 		AA2A151109234217AA000007 /* Bridge.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA151109234217AA000007 /* Bridge.h */; };
 		AA2A151109234217AA000008 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAA151109234217AA000008 /* Console.cpp */; };
@@ -521,11 +518,6 @@
 		85E65FB91BF1D73800805728 /* TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TemplateIcon.icns; path = Utilities/TemplateIcon.icns; sourceTree = "<group>"; };
 		85E65FBA1BF1D73800805728 /* uploader_izmir.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = uploader_izmir.sh; path = Utilities/uploader_izmir.sh; sourceTree = "<group>"; };
 		85E65FBB1BF1D73800805728 /* Smart_Arm_Band.ino */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = Smart_Arm_Band.ino; sourceTree = "<group>"; };
-		85E65FD01BF1D89600805728 /* Adafruit_GFX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Adafruit_GFX.cpp; sourceTree = "<group>"; };
-		85E65FD11BF1D89600805728 /* Adafruit_GFX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adafruit_GFX.h; sourceTree = "<group>"; };
-		85E65FD21BF1D89600805728 /* Adafruit_ssd1306syp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Adafruit_ssd1306syp.cpp; sourceTree = "<group>"; };
-		85E65FD31BF1D89600805728 /* Adafruit_ssd1306syp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adafruit_ssd1306syp.h; sourceTree = "<group>"; };
-		85E65FD41BF1D89600805728 /* glcdfont.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glcdfont.c; sourceTree = "<group>"; };
 		AAAA151109234217AA000006 /* Bridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bridge.cpp; sourceTree = "<group>"; };
 		AAAA151109234217AA000007 /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		AAAA151109234217AA000008 /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Console.cpp; sourceTree = "<group>"; };
@@ -927,11 +919,6 @@
 		85E65F361BF1D73800805728 /* Smart-Arm-Band */ = {
 			isa = PBXGroup;
 			children = (
-				85E65FD01BF1D89600805728 /* Adafruit_GFX.cpp */,
-				85E65FD11BF1D89600805728 /* Adafruit_GFX.h */,
-				85E65FD21BF1D89600805728 /* Adafruit_ssd1306syp.cpp */,
-				85E65FD31BF1D89600805728 /* Adafruit_ssd1306syp.h */,
-				85E65FD41BF1D89600805728 /* glcdfont.c */,
 				85E65F371BF1D73800805728 /* main.cpp */,
 				85E65F391BF1D73800805728 /* Makefile */,
 				85E65F3B1BF1D73800805728 /* ReadMe.txt */,
@@ -2651,7 +2638,6 @@
 				AA2A151109234217AA0000BE /* IRremote.cpp in Sources */,
 				AA2A151109234217AA0000BF /* IRremote.h in Sources */,
 				AA2A151109234217AA0000C0 /* IRremoteInt.h in Sources */,
-				85E65FD61BF1D89600805728 /* Adafruit_ssd1306syp.cpp in Sources */,
 				AA2A151109234217AA0000C1 /* IRremoteTools.cpp in Sources */,
 				AA2A151109234217AA0000C2 /* IRremoteTools.h in Sources */,
 				AA2A151109234217AA0000C5 /* File.cpp in Sources */,
@@ -2721,7 +2707,6 @@
 				AA2A151109234217AA00011D /* clocks.h in Sources */,
 				AA2A151109234217AA00011F /* conf_access.h in Sources */,
 				AA2A151109234217AA000120 /* conf_at45dbx.h in Sources */,
-				85E65FD71BF1D89600805728 /* glcdfont.c in Sources */,
 				AA2A151109234217AA000122 /* flash_fw.c in Sources */,
 				AA2A151109234217AA000123 /* nor_flash.c in Sources */,
 				AA2A151109234217AA000124 /* nor_flash.h in Sources */,
@@ -2774,7 +2759,6 @@
 				AA2A151109234217AA000172 /* tpaste.h in Sources */,
 				AA2A151109234217AA000175 /* startup.c in Sources */,
 				AA2A151109234217AA000176 /* startup.h in Sources */,
-				85E65FD51BF1D89600805728 /* Adafruit_GFX.cpp in Sources */,
 				AA2A151109234217AA000177 /* wl_fw.h in Sources */,
 				AA2A151109234217AA000178 /* wifi_dnld.cproj in Sources */,
 				AA2A151109234217AA00017A /* .cproject in Sources */,

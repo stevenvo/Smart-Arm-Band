@@ -48,8 +48,8 @@
 
 // Include application, user and local libraries
 //#include <spi4teensy3.h>
-#include "Adafruit_BLE_UART.h"
-#include "Adafruit_ssd1306syp.h"
+//#include "Adafruit_BLE_UART.h"
+//#include "Adafruit_ssd1306syp.h"
 
 
 
@@ -68,7 +68,7 @@
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
 #include "i2c_t3.h"
 #endif
-
+ 
 
 // Prototypes
 
@@ -78,18 +78,18 @@
 /* ===== Bluetooth BLE UART ===== */
 // Connect CLK/MISO/MOSI to hardware SPI
 // e.g. On UNO & compatible: CLK = 13, MISO = 12, MOSI = 11
-#define ADAFRUITBLE_REQ 10
-#define ADAFRUITBLE_RDY 2     // This should be an interrupt pin, on Uno thats #2 or #3
-#define ADAFRUITBLE_RST 9
-Adafruit_BLE_UART BTLEserial = Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
+//#define ADAFRUITBLE_REQ 10
+//#define ADAFRUITBLE_RDY 2     // This should be an interrupt pin, on Uno thats #2 or #3
+//#define ADAFRUITBLE_RST 9
+//Adafruit_BLE_UART BTLEserial = Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
 
 const int ledPin = 13;
 
 /* ============================== */
 /* ======== SSD-1306 OLED ======= */
-#define SDA_PIN 18
-#define SCL_PIN 19
-Adafruit_ssd1306syp display(SDA_PIN,SCL_PIN);
+//#define SDA_PIN 18
+//#define SCL_PIN 19
+//Adafruit_ssd1306syp display(SDA_PIN,SCL_PIN);
 
 
 /* ============================== */
@@ -169,29 +169,29 @@ uint8_t teapotPacket[14] = { '$', 0x02, 0,0, 0,0, 0,0, 0,0, 0x00, 0x00, '\r', '\
 /* ============================== */
 /* ======== SSD-1306 OLED ======= */
 
-void draw_header(boolean clear, char txt[]){
-   if (clear){
-      display.clear();
-   }
-   display.setTextSize(2);
-   display.setTextColor(BLACK, WHITE); // 'inverted' text
-   display.setCursor(0,0);
-   display.println(txt);
-   display.update();
-}
-
-void draw_text(char* txt){
-   //  if (clear){
-   //    display.clear();
-   //  }
-   //  display.clear();
-   draw_header(true, "SMART BAND");
-   display.setTextSize(1);
-   display.setTextColor(WHITE);
-   display.setCursor(0,17);
-   display.println(txt);
-   display.update();
-}
+//void draw_header(boolean clear, char txt[]){
+//   if (clear){
+//      display.clear();
+//   }
+//   display.setTextSize(2);
+//   display.setTextColor(BLACK, WHITE); // 'inverted' text
+//   display.setCursor(0,0);
+//   display.println(txt);
+//   display.update();
+//}
+//
+//void draw_text(char* txt){
+//   //  if (clear){
+//   //    display.clear();
+//   //  }
+//   //  display.clear();
+//   draw_header(true, "SMART BAND");
+//   display.setTextSize(1);
+//   display.setTextColor(WHITE);
+//   display.setCursor(0,17);
+//   display.println(txt);
+//   display.update();
+//}
 
 
 // ================================================================
@@ -210,67 +210,67 @@ void dmpDataReady() {
  Constantly checks for new events on the nRF8001
  */
 /**************************************************************************/
-aci_evt_opcode_t laststatus = ACI_EVT_DISCONNECTED;
+//aci_evt_opcode_t laststatus = ACI_EVT_DISCONNECTED;
 
-int check_ble_status(){
-   
-   // Ask what is our current status
-   aci_evt_opcode_t status = BTLEserial.getState();
-   // If the status changed....
-   if (status != laststatus) {
-      // print it out!
-      if (status == ACI_EVT_DEVICE_STARTED) {
-         Serial.println(F("* Advertising started"));
-         draw_text("* Advertising started");
-         digitalWrite(ledPin, HIGH);   // set the LED on
-         delay(500);                   // wait for half a second
-         digitalWrite(ledPin, LOW);    // set the LED off
-         delay(500);                   // wait for half a second
-      }
-      if (status == ACI_EVT_CONNECTED) {
-         Serial.println(F("* Connected!"));
-         draw_text("* Connected!");
-      }
-      if (status == ACI_EVT_DISCONNECTED) {
-         Serial.println(F("* Disconnected or advertising timed out"));
-         draw_text("* Disconnected or advertising timed out");
-      }
-      // OK set the last status change to this one
-      laststatus = status;
-   }
-}
-
-void process_ble(){
-   // Lets see if there's any data for us!
-   if (BTLEserial.available()) {
-      Serial.print("* "); Serial.print(BTLEserial.available()); Serial.println(F(" bytes available from BLE"));
-   }
-   // OK while we still have something to read, get a character and print it out
-   while (BTLEserial.available()) {
-      char c = BTLEserial.read();
-      Serial.print(c);
-   }
-   
-   // Next up, see if we have any data to get from the Serial console
-   
-   if (Serial.available()) {
-      // Read a line from Serial
-      Serial.setTimeout(100); // 100 millisecond timeout
-      String s = Serial.readString();
-      
-      // We need to convert the line to bytes, no more than 20 at this time
-      uint8_t sendbuffer[20];
-      s.getBytes(sendbuffer, 20);
-      char sendbuffersize = min(20, s.length());
-      
-      //      draw_text(sendbuffersize);
-      
-      Serial.print(F("\n* Sending -> \"")); Serial.print((char *)sendbuffer); Serial.println("\"");
-      
-      // write the data
-      BTLEserial.write(sendbuffer, sendbuffersize);
-   }
-}
+//int check_ble_status(){
+//   
+//   // Ask what is our current status
+//   aci_evt_opcode_t status = BTLEserial.getState();
+//   // If the status changed....
+//   if (status != laststatus) {
+//      // print it out!
+//      if (status == ACI_EVT_DEVICE_STARTED) {
+//         Serial.println(F("* Advertising started"));
+//         draw_text("* Advertising started");
+//         digitalWrite(ledPin, HIGH);   // set the LED on
+//         delay(500);                   // wait for half a second
+//         digitalWrite(ledPin, LOW);    // set the LED off
+//         delay(500);                   // wait for half a second
+//      }
+//      if (status == ACI_EVT_CONNECTED) {
+//         Serial.println(F("* Connected!"));
+//         draw_text("* Connected!");
+//      }
+//      if (status == ACI_EVT_DISCONNECTED) {
+//         Serial.println(F("* Disconnected or advertising timed out"));
+//         draw_text("* Disconnected or advertising timed out");
+//      }
+//      // OK set the last status change to this one
+//      laststatus = status;
+//   }
+//}
+//
+//void process_ble(){
+//   // Lets see if there's any data for us!
+//   if (BTLEserial.available()) {
+//      Serial.print("* "); Serial.print(BTLEserial.available()); Serial.println(F(" bytes available from BLE"));
+//   }
+//   // OK while we still have something to read, get a character and print it out
+//   while (BTLEserial.available()) {
+//      char c = BTLEserial.read();
+//      Serial.print(c);
+//   }
+//   
+//   // Next up, see if we have any data to get from the Serial console
+//   
+//   if (Serial.available()) {
+//      // Read a line from Serial
+//      Serial.setTimeout(100); // 100 millisecond timeout
+//      String s = Serial.readString();
+//      
+//      // We need to convert the line to bytes, no more than 20 at this time
+//      uint8_t sendbuffer[20];
+//      s.getBytes(sendbuffer, 20);
+//      char sendbuffersize = min(20, s.length());
+//      
+//      //      draw_text(sendbuffersize);
+//      
+//      Serial.print(F("\n* Sending -> \"")); Serial.print((char *)sendbuffer); Serial.println("\"");
+//      
+//      // write the data
+//      BTLEserial.write(sendbuffer, sendbuffersize);
+//   }
+//}
 
 
 
@@ -502,19 +502,11 @@ void setup() {
    
    pinMode(ledPin, OUTPUT);
    
-   Serial.begin(9600); // for debugging
-   Serial.println("SETUP");
-   
-   display.initialize();
-   Serial.println(F("- SSD-1306 is ready"));
-   draw_text("- SSD-1306 is ready");
-   
-   
-   while(!Serial); // Leonardo/Micro should wait for serial init
-   BTLEserial.setDeviceName("armband"); /* 7 characters max! */
-   BTLEserial.begin();
-   Serial.println(F("- BLE nRF8001 is ready"));
-   draw_text("- BLE nRF8001 is ready");
+   Serial.begin(57600); // for debugging
+   while (!Serial){
+      
+
+   }
    
 //   mpu_setup();
    
@@ -526,17 +518,7 @@ void setup() {
 // ================================================================
 
 void loop() {
-   // put your main code here, to run repeatedly:
-   // Tell the nRF8001 to do whatever it should be working on.
-   BTLEserial.pollACI();
+
+//   mpu_loop();
    
-   int status = check_ble_status();
-   
-   if (status == ACI_EVT_CONNECTED) {
-      process_ble();
-   }
-   
-   mpu_loop();
-   
-   //  draw_something();
 }
