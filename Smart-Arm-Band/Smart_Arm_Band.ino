@@ -83,6 +83,7 @@
 #define ADAFRUITBLE_RST 9
 Adafruit_BLE_UART BTLEserial = Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
 
+const int ledPin = 13;
 
 /* ============================== */
 /* ======== SSD-1306 OLED ======= */
@@ -212,6 +213,7 @@ void dmpDataReady() {
 aci_evt_opcode_t laststatus = ACI_EVT_DISCONNECTED;
 
 int check_ble_status(){
+   
    // Ask what is our current status
    aci_evt_opcode_t status = BTLEserial.getState();
    // If the status changed....
@@ -220,6 +222,10 @@ int check_ble_status(){
       if (status == ACI_EVT_DEVICE_STARTED) {
          Serial.println(F("* Advertising started"));
          draw_text("* Advertising started");
+         digitalWrite(ledPin, HIGH);   // set the LED on
+         delay(500);                   // wait for half a second
+         digitalWrite(ledPin, LOW);    // set the LED off
+         delay(500);                   // wait for half a second
       }
       if (status == ACI_EVT_CONNECTED) {
          Serial.println(F("* Connected!"));
@@ -237,7 +243,7 @@ int check_ble_status(){
 void process_ble(){
    // Lets see if there's any data for us!
    if (BTLEserial.available()) {
-      Serial.print("* "); Serial.print(BTLEserial.available()); Serial.println(F(" bytes available from BTLE"));
+      Serial.print("* "); Serial.print(BTLEserial.available()); Serial.println(F(" bytes available from BLE"));
    }
    // OK while we still have something to read, get a character and print it out
    while (BTLEserial.available()) {
@@ -494,6 +500,8 @@ void mpu_loop() {
 
 void setup() {
    
+   pinMode(ledPin, OUTPUT);
+   
    Serial.begin(9600); // for debugging
    Serial.println("SETUP");
    
@@ -508,7 +516,7 @@ void setup() {
    Serial.println(F("- BLE nRF8001 is ready"));
    draw_text("- BLE nRF8001 is ready");
    
-   mpu_setup();
+//   mpu_setup();
    
 }
 
